@@ -5,9 +5,12 @@ import "./Profile.css";
 
 const Profile = () => {
   const [catHappiness, setCatHappiness] = useState(0);
+  const incrementCatHappiness = () => {
+    setCatHappiness(catHappiness + 1);
+  };
   return (
     <div>
-      <div className="Profile-avatarContainer">
+      <div className="Profile-avatarContainer" onClick={incrementCatHappiness}>
         <div className="Profile-avatar" />
       </div>
       <h1 className="Profile-name u-textCenter">YOUR NAME HERE</h1>
