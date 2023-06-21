@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import CatHappiness from "../modules/CatHappiness.js";
 import "../../utilities.css";
 import "./Profile.css";
 
 const Profile = () => {
+  const [catHappiness, setCatHappiness] = useState(0);
   return (
     <div>
       <div className="Profile-avatarContainer">
@@ -17,10 +19,10 @@ const Profile = () => {
             Extra Challenge: Modify catbook to show a personalized description here!
           </div>
         </div>
-        {/** TODO STEP 1:
-         *  Insert Cat Happiness component here.
-         *  HINT: You probably want to add a new Profile-subContainer to hold the CatHappiness component.
-         */}
+        <div className="Profile-subContainer u-textCenter">
+          <h4 className="Profile-subTitle">CatHappiness</h4>
+          <CatHappiness catHappiness={catHappiness} />
+        </div>
         <div className="Profile-subContainer u-textCenter">
           <h4 className="Profile-subTitle">My Favorite Type of Cat</h4>
           <div id="favorite-cat">corgi</div>
